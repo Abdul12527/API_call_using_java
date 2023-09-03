@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.*;
 import java.net.URL;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
@@ -44,7 +45,9 @@ public class Main {
                 }
                 data.append(readLine);
             }
-            System.out.println(data);
+            String[] datas=data.toString().split(",");
+            Arrays.stream(datas).forEach(dat-> System.out.println(dat));
+            
         }
 
 
