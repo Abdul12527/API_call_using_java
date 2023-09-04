@@ -1,5 +1,7 @@
 package org.example;
 
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -47,7 +49,10 @@ public class Main {
             }
             String[] datas=data.toString().split(",");
             Arrays.stream(datas).forEach(dat-> System.out.println(dat));
-            
+            JSONObject jsonAPIResponse = new JSONObject(data.toString());
+            System.out.println(jsonAPIResponse.get("name"));
+
+
         }
 
 
